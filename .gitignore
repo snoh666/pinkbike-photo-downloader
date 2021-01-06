@@ -1,0 +1,7 @@
+node_modules
+public.crx
+public.pem
+yarn-error.log
+
+/public
+.idea
