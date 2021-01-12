@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+@import './varaibles';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: $base10;
+  color: $main0;
+}
+
+.site {
+  padding: 1rem .75rem;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.flex--center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text--center {
+  text-align: center;
+}
+
+.title {
+  margin: .5rem 0 1rem;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.note {
+  font-size: .75rem;
+}
+
+button {
+  margin: .75rem auto;
+  padding: .25rem .5rem;
+  border: 1px solid $base0;
+  border-radius: 8px;
+  background: $main0;
+  cursor: pointer;
+  transition: transform .3s ease;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+a {
+  color: $main0 !important;
+}
+
+.error__message {
+  color: $errorRed;
+}
+
+footer {
+  width: 100%;
+}
+
+.footer {
+  width: 100%;
+  margin-top: 1rem;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
