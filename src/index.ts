@@ -1,7 +1,7 @@
 import './styles/style.scss';
 import outputErrorMessage from "./fragments/outputErrorMessage";
 import getPhotoIdFromLink from "./fragments/getPhotoIdFromLink";
-import isPinkBikeUrl from "./fragments/isPinkBikeUrl";
+import isPinkBikePhotoUrl from "./fragments/isPinkBikePhotoUrl";
 import downloadPhoto from "./fragments/downloadPhoto";
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const currentUrl = currentTab[0].url;
         const photoId = getPhotoIdFromLink(currentUrl);
 
-        if (!isPinkBikeUrl(currentUrl)) {
+        if (!isPinkBikePhotoUrl(currentUrl)) {
           outputErrorMessage(`Wrong window url, does not match known pink bike site`);
           return;
         }
