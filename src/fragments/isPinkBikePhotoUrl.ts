@@ -5,14 +5,16 @@ const isPinkBikePhotoUrl = (url: string) => {
 
   const routes = url.split('/');
   if (!routes.length) return false;
-  const photoIndex = routes.findIndex((value: string) => value === 'photo');
+  const foundPhotoIndex = routes.findIndex((value: string) => value === 'photo');
+  if (!foundPhotoIndex && foundPhotoIndex !== 0) return false;
+  const photoIndex = foundPhotoIndex + 1;
 
   if (!photoIndex && photoIndex !== 0) return false;
   const photoId = routes[photoIndex];
   if (!photoId) return false;
   if (!photoId.match(/^[0-9]*$/)) return false;
 
-  return photoId.length === 8;
+  return true;
 }
 
 export default isPinkBikePhotoUrl;
