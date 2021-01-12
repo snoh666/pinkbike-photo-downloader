@@ -1,4 +1,4 @@
-const isPinkBikeUrl = (url: string) => {
+const isPinkBikePhotoUrl = (url: string) => {
   if (!url.includes('pinkbike')) return false;
   if (!url.includes('/photo/')) return false;
   if (!url.includes('https')) return false;
@@ -15,4 +15,4 @@ const isPinkBikeUrl = (url: string) => {
   return photoId.length === 8;
 }
 
-export default isPinkBikeUrl;
+export default isPinkBikePhotoUrl;
