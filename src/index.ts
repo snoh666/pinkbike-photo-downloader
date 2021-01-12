@@ -1,3 +1,4 @@
+import './styles/style.scss';
 import outputErrorMessage from "./fragments/outputErrorMessage";
 import getPhotoIdFromLink from "./fragments/getPhotoIdFromLink";
 import isPinkBikeUrl from "./fragments/isPinkBikeUrl";
