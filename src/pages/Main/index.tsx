@@ -1,11 +1,12 @@
 import React from 'react';
 
 import Basic from '@layouts/Basic';
+import DownloadContent from '@components/DownloadContent';
 
 const Main: React.FC = () => {
   return (
     <Basic>
-      <p>Main route page</p>
+      <DownloadContent />
     </Basic>
   );
 };
