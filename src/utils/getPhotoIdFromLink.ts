@@ -1,15 +1,19 @@
-const getPhotoIdFromLink = (link: string): string | undefined => {
+const getPhotoIdFromLink = (link: string): string => {
   const linkArray = link.split('/');
 
-  return linkArray.find((part, idx) => {
-    if (part === 'www.pinkbike.com' || part === 'pinkbike.com') {
-      if (linkArray[idx + 1] === 'photo') {
-        return linkArray[idx + 2];
+  // eslint-disable-next-line no-plusplus
+  for (let i = 0; i < linkArray.length; i++) {
+    if (
+      linkArray[i] === 'www.pinkbike.com' ||
+      linkArray[i] === 'pinkbike.com'
+    ) {
+      if (linkArray[i + 1] === 'photo') {
+        return linkArray[i + 2];
       }
     }
+  }
 
-    return false;
-  });
+  return '';
 };
 
 export default getPhotoIdFromLink;
