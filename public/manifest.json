@@ -1,25 +1,17 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
-  "icons": [
-    {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
+  "name": "PinkBike Photo Downloader",
+  "description": "Chrome Extension for downloading pinkbike photo images in highest resolution!",
+  "manifest_version": 3,
+  "version": "1.0.0",
+
+  "action": {
+    "default_icon": {
+      "16": "favicon.ico",
+      "48": "favicon.ico"
     },
-    {
-      "src": "logo192.png",
-      "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "logo512.png",
-      "type": "image/png",
-      "sizes": "512x512"
-    }
-  ],
-  "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+    "default_popup": "index.html"
+  },
+  "permissions": [
+    "tabs"
+  ]
 }
