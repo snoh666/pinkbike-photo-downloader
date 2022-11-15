@@ -1,24 +1,22 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
 
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
-
 import theme from '@styles/theme';
 import GlobalStyles from '@styles/GlobalStyles';
-
-import Main from '@pages/Main';
+import useDownloadHandler from '@hooks/useDownloadHandler';
 
 const App: React.FC = () => {
+  const { download, error } = useDownloadHandler();
+
+  const handleDownload = () => download();
+
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />
-      <BrowserRouter>
-        <Switch>
-          <Route exact path='/'>
-            <Main />
-          </Route>
-        </Switch>
-      </BrowserRouter>
+      <button onClick={handleDownload} type='button'>
+        Download current iamge
+      </button>
+      {error || <p>{error}</p>}
     </ThemeProvider>
   );
 };
