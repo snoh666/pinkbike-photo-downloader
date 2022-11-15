@@ -2,8 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
-  width: 100%;
-  min-height: 100vh;
+  min-width: 300px;
+  min-height: 300px;
+  background: ${({ theme }) => theme.colors.black10};
 `;
 
 const Basic: React.FC = ({ children }) => {
