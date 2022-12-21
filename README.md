@@ -4,31 +4,30 @@ Template for React App with already setup environment with most popular packages
 
 <br/>Main github repo [snoh666/react-typescript-template](https://github.com/snoh666/react-typescript-template)
 
-## Contained packages
+## What problem does this extension solve? 
+If you’re not the owner of the image, you can only download resized versions of the image, sometimes those sizings are not really good to ur use case.
 
-- redux:
-    - redux-thunk
-    - redux-devtools-extension
-- styled-components
-- eslint & prettier configured into airbnb rules
-- typescript compiling
-- react-app-rewired (webpack aliases without ejecting)
-- jest + enzyme testing scripts
+As an example this photo can only be downloaded as 1600x1067 and by using this extension we can download it original size which is 5511x3674
 
-## Installing and starting
+<img width="261" alt="image" src="https://user-images.githubusercontent.com/43639758/208632735-1592e4f4-8271-4e37-95e8-bdd23daa65c6.png">
 
-Starting goes the same way as normal CRA.
-1. Installing all required packages with `npm install` or `yarn install`
-2. Starting up React App `npm start` or `yarn start`
-3. Ready to go!
+and size that is accessible by default for us is not really the best fit for wallpapers as most of the devices now have bigger resolution sizes
 
-App is prepared to handle `yarn` and also `npm` depending on what you want just delete stuff
-related to useless one.
+Of course you can do that by hand ([Check next section](#how-to-download-manually)), but that was taking too much time for me, so I really wanted to speed up the process of downloading them.
 
-## About
+## How to download manually
 
-I've wanted to have some kind of less advanced template to use with my side projects.
-Later on I've decided on making this real public "template" which other people can really use or learn from
+1. Get the photo id ( numbers after "/photo/" )
+2. Copy it
+3. Open new tab
+4. Paste link provided below
+5. Replace two times "{photoId}" with your photo id
+6. Press enter
+7. You have done it! It should start downloading photo in original size!
+```
+http://ep1.pinkbike.org/p0pb{photoId}/p4pb{photoId}.jpg
+```
 
-I know It's very hard to always get started on first projects with that kind of libraries as TypeScript or even redux-thunk so that's it!
-Feel free to use MR's are really welcome here!
+
+## License
+(…)
