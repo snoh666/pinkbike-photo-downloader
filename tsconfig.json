@@ -1,0 +1,39 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "target": "es5",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "typeRoots": [
+      "./types"
+    ]
+  },
+  "include": [
+    "src",
+    ".eslintrc.js",
+    "node_modules/@types/jest/index.d.ts"
+  ],
+  "exclude": [
+    "config-overrides.js",
+    "jest.config.js",
+    "jest/setupTests.js"
+  ],
+  "typeRoots": [
+    "./types"
+  ]
+}
