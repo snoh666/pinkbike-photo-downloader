@@ -1,8 +1,7 @@
-# React TypeScript template
+# Pinkbike Photo Downloader
 
-Template for React App with already setup environment with most popular packages.
-
-<br/>Main github repo [snoh666/react-typescript-template](https://github.com/snoh666/react-typescript-template)
+## Overview
+Chromium extension to allow downloading highest quality (original size) images from pinkbike.com 
 
 ## What problem does this extension solve? 
 If you’re not the owner of the image, you can only download resized versions of the image, sometimes those sizings are not really good to ur use case.
