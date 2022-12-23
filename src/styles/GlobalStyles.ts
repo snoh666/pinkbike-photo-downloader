@@ -7,13 +7,14 @@ const GlobalStyles = createGlobalStyle`
     padding: 0;
     font-family: 'Titillium Web', sans-serif;
   }
-  
+
   :root {
     font-size: 16px;
   }
 
   body {
-    background: ${({ theme }) => theme.colors.whiteSeven};
+    background: ${({ theme }) => theme.colors.redLight};
+    padding: 4px;
   }
 `;
 
