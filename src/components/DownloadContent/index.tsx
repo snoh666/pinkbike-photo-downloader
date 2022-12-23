@@ -12,7 +12,7 @@ const DownloadContent: FC = () => {
   return (
     <Container>
       <button onClick={handleDownload} type='button'>
-        Download current iamge
+        Download current image
       </button>
       <div>{error || <p>{error}</p>}</div>
     </Container>
