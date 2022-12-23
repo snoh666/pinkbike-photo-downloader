@@ -17,6 +17,7 @@ module.exports = {
   },
   rules: {
     'react/jsx-props-no-spreading': 'off',
+    'react/react-in-jsx-scope': 'off',
     'no-shadow': 'off',
     'react-redux/connect-prefer-named-arguments': 'off',
     'react-redux/prefer-separate-component-file': 'off',
