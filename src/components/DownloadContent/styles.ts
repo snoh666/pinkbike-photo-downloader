@@ -8,4 +8,9 @@ const Container = styled.div`
   justify-content: center;
 `;
 
+export const Button = styled.button`
+  border: 2px solid ${({ theme }) => theme.colors.red};
+  background: none;
+`;
+
 export default Container;
