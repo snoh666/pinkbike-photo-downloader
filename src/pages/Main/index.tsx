@@ -1,9 +1,7 @@
-import React from 'react';
-
 import Basic from '@layouts/Basic';
 import DownloadContent from '@components/DownloadContent';
 
-const Main: React.FC = () => {
+const Main = () => {
   return (
     <Basic>
       <DownloadContent />

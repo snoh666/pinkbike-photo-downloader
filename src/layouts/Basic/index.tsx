@@ -1,4 +1,4 @@
-import React from 'react';
+import { ReactNode } from 'react';
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
@@ -9,7 +9,11 @@ const Wrapper = styled.div`
   overflow: hidden;
 `;
 
-const Basic: React.FC = ({ children }) => {
+interface BasicProps {
+  children: ReactNode;
+}
+
+const Basic = ({ children }: BasicProps) => {
   return <Wrapper>{children}</Wrapper>;
 };
 
