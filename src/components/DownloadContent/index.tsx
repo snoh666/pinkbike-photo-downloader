@@ -1,10 +1,8 @@
-import React, { FC } from 'react';
-
 import useDownloadHandler from '@hooks/useDownloadHandler';
 
 import Container from './styles';
 
-const DownloadContent: FC = () => {
+const DownloadContent = () => {
   const { download, error } = useDownloadHandler();
 
   const handleDownload = () => download();
