@@ -10,6 +10,7 @@ const GlobalStyles = createGlobalStyle`
 
   :root {
     font-size: 16px;
+    color: ${({ theme }) => theme.colors.white};
   }
 
   body {
