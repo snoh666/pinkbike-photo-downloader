@@ -29,7 +29,16 @@ module.exports = {
     ],
     'import/no-unresolved': 'off',
     'react/prop-types': 'off',
+    '@typescript-eslint/explicit-module-boundary-types': 'error',
   },
+  overrides: [
+    {
+      files: ['src/**/*.tsx'],
+      rules: {
+        '@typescript-eslint/explicit-module-boundary-types': ['off'],
+      },
+    },
+  ],
   env: {
     browser: true,
     es6: true,
