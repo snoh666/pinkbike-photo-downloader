@@ -1,6 +1,6 @@
 {
   "name": "PinkBike Photo Downloader",
-  "description": "Chrome Extension for downloading pinkbike photo images in highest resolution!",
+  "description": "Download pinkbike photos in highest resolution available (original size)",
   "manifest_version": 3,
   "version": "1.0.0",
 
