@@ -14,7 +14,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    background: ${({ theme }) => theme.colors.redLight};
+    background: ${({ theme }) => theme.colors.black};
     padding: 4px;
   }
 `;
