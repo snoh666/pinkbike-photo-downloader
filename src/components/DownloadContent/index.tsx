@@ -1,6 +1,6 @@
 import useDownloadHandler from '@hooks/useDownloadHandler';
 
-import Container from './styles';
+import { Container, Button, ErrorMessage } from './styles';
 
 const DownloadContent = () => {
   const { download, error } = useDownloadHandler();
@@ -9,10 +9,10 @@ const DownloadContent = () => {
 
   return (
     <Container>
-      <button onClick={handleDownload} type='button'>
+      <Button onClick={handleDownload} type='button'>
         Download current image
-      </button>
-      <div>{error || <p>{error}</p>}</div>
+      </Button>
+      <ErrorMessage>{error || <span>{error}</span>}</ErrorMessage>
     </Container>
   );
 };

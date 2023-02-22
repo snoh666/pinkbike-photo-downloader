@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const Container = styled.div`
+export const Container = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -9,8 +9,14 @@ const Container = styled.div`
 `;
 
 export const Button = styled.button`
-  border: 2px solid ${({ theme }) => theme.colors.red};
+  padding: 0.5rem 0.75rem;
   background: none;
+  border: 2px solid ${({ theme }) => theme.colors.white};
+  border-radius: 0.5rem;
+  color: ${({ theme }) => theme.colors.white};
 `;
 
-export default Container;
+export const ErrorMessage = styled.p`
+  margin: 0.5rem 0;
+  color: ${({ theme }) => theme.colors.red};
+`;
