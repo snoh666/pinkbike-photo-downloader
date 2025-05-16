@@ -26,6 +26,7 @@
   },
   "include": [
     "src",
+    "jest/setupTests.js",
     ".eslintrc.js",
     "node_modules/@types/jest/index.d.ts"
   ],
