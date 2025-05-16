@@ -26,14 +26,13 @@
   },
   "include": [
     "src",
-    "jest/setupTests.js",
+    "setupTests.ts",
     ".eslintrc.js",
     "node_modules/@types/jest/index.d.ts"
   ],
   "exclude": [
     "config-overrides.js",
     "jest.config.js",
-    "jest/setupTests.js"
   ],
   "typeRoots": [
     "./types"
