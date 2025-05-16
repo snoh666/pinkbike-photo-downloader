@@ -1,14 +1,10 @@
 {
-  "extends": "./tsconfig.base.json",
   "compilerOptions": {
     "target": "es5",
     "lib": [
       "dom",
       "dom.iterable",
       "esnext"
-    ],
-    "types": [
-      "chrome"
     ],
     "allowJs": true,
     "skipLibCheck": true,
@@ -23,7 +19,8 @@
     "noEmit": true,
     "jsx": "react-jsx",
     "typeRoots": [
-      "./types"
+      "./types",
+      "node_modules/@types"
     ],
     "isolatedModules": true
   },

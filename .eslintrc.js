@@ -1,44 +1,54 @@
 module.exports = {
   parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint'],
-  extends: [
-    'airbnb-typescript',
-    'prettier/@typescript-eslint',
-    'plugin:prettier/recommended',
-    'plugin:@typescript-eslint/recommended',
-  ],
   parserOptions: {
-    project: './tsconfig.json',
+    ecmaVersion: 2020,
+    sourceType: 'module',
     ecmaFeatures: {
       jsx: true,
     },
-    ecmaVersion: 11,
-    sourceType: 'module',
+    project: './tsconfig.json',
   },
+  extends: [
+    'prettier',
+    'airbnb-typescript',
+    'plugin:prettier/recommended',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:import/recommended',
+    'plugin:import/typescript',
+  ],
+  plugins: [
+    '@typescript-eslint',
+    'import',
+  ],
   rules: {
-    'react/jsx-props-no-spreading': 'off',
-    'react/react-in-jsx-scope': 'off',
-    'no-shadow': 'off',
-    'react-redux/connect-prefer-named-arguments': 'off',
-    'react-redux/prefer-separate-component-file': 'off',
     'prettier/prettier': [
       'error',
       {
         endOfLine: 'auto',
       },
     ],
+    // Disable problematic import rules
+    'import/extensions': 'off',
+    'import/no-extraneous-dependencies': 'off',
     'import/no-unresolved': 'off',
-    'react/prop-types': 'off',
-    '@typescript-eslint/explicit-module-boundary-types': 'warn',
+    'import/named': 'off',
+    'import/namespace': 'off',
+    'import/default': 'off',
   },
-  overrides: [
-    {
-      files: ['src/**/*.tsx'],
-      rules: {
-        '@typescript-eslint/explicit-module-boundary-types': ['off'],
+  settings: {
+    'import/resolver': {
+      typescript: {
+        alwaysTryTypes: true,
+      },
+      node: {
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
       },
     },
-  ],
+    'import/extensions': ['.js', '.jsx', '.ts', '.tsx'],
+    'import/parsers': {
+      '@typescript-eslint/parser': ['.ts', '.tsx'],
+    },
+  },
   env: {
     browser: true,
     es6: true,

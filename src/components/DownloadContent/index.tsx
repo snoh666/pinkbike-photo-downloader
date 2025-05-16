@@ -1,4 +1,4 @@
-import useDownloadHandler from '@hooks/useDownloadHandler';
+import useDownloadHandler from '../../hooks/useDownloadHandler';
 
 import {
   Container,
