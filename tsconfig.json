@@ -1,14 +1,10 @@
 {
-  "extends": "./tsconfig.base.json",
   "compilerOptions": {
     "target": "es5",
     "lib": [
       "dom",
       "dom.iterable",
       "esnext"
-    ],
-    "types": [
-      "chrome"
     ],
     "allowJs": true,
     "skipLibCheck": true,
@@ -23,19 +19,20 @@
     "noEmit": true,
     "jsx": "react-jsx",
     "typeRoots": [
-      "./types"
+      "./types",
+      "node_modules/@types"
     ],
     "isolatedModules": true
   },
   "include": [
     "src",
+    "setupTests.ts",
     ".eslintrc.js",
     "node_modules/@types/jest/index.d.ts"
   ],
   "exclude": [
     "config-overrides.js",
     "jest.config.js",
-    "jest/setupTests.js"
   ],
   "typeRoots": [
     "./types"

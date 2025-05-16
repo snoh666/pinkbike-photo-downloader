@@ -1,11 +1,13 @@
 module.exports = {
   parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint'],
   extends: [
+    'prettier',
     'airbnb-typescript',
-    'prettier/@typescript-eslint',
+    'plugin:react/recommended',
     'plugin:prettier/recommended',
     'plugin:@typescript-eslint/recommended',
+    'plugin:import/recommended',
+    'plugin:import/typescript',
   ],
   parserOptions: {
     project: './tsconfig.json',
@@ -16,11 +18,8 @@ module.exports = {
     sourceType: 'module',
   },
   rules: {
-    'react/jsx-props-no-spreading': 'off',
+    'react/jsx-filename-extension': ['warn', { extensions: ['.jsx', '.tsx'] }],
     'react/react-in-jsx-scope': 'off',
-    'no-shadow': 'off',
-    'react-redux/connect-prefer-named-arguments': 'off',
-    'react-redux/prefer-separate-component-file': 'off',
     'prettier/prettier': [
       'error',
       {
@@ -29,18 +28,22 @@ module.exports = {
     ],
     'import/no-unresolved': 'off',
     'react/prop-types': 'off',
-    '@typescript-eslint/explicit-module-boundary-types': 'warn',
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
+    // Disables styled imports
+    'import/no-named-as-default': 'off',
   },
-  overrides: [
-    {
-      files: ['src/**/*.tsx'],
-      rules: {
-        '@typescript-eslint/explicit-module-boundary-types': ['off'],
-      },
-    },
-  ],
   env: {
     browser: true,
     es6: true,
+  },
+  settings: {
+    'import/resolver': {
+      typescript: {
+        alwaysTryTypes: true,
+      },
+      node: {
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+      },
+    },
   },
 };
