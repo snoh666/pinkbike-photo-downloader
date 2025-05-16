@@ -1,39 +1,40 @@
 module.exports = {
   parser: '@typescript-eslint/parser',
-  parserOptions: {
-    ecmaVersion: 2020,
-    sourceType: 'module',
-    ecmaFeatures: {
-      jsx: true,
-    },
-    project: './tsconfig.json',
-  },
   extends: [
     'prettier',
     'airbnb-typescript',
+    'plugin:react/recommended',
     'plugin:prettier/recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:import/recommended',
     'plugin:import/typescript',
   ],
-  plugins: [
-    '@typescript-eslint',
-    'import',
-  ],
+  parserOptions: {
+    project: './tsconfig.json',
+    ecmaFeatures: {
+      jsx: true,
+    },
+    ecmaVersion: 11,
+    sourceType: 'module',
+  },
   rules: {
+    'react/jsx-filename-extension': ['warn', { extensions: ['.jsx', '.tsx'] }],
+    'react/react-in-jsx-scope': 'off',
     'prettier/prettier': [
       'error',
       {
         endOfLine: 'auto',
       },
     ],
-    // Disable problematic import rules
-    'import/extensions': 'off',
-    'import/no-extraneous-dependencies': 'off',
     'import/no-unresolved': 'off',
-    'import/named': 'off',
-    'import/namespace': 'off',
-    'import/default': 'off',
+    'react/prop-types': 'off',
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
+    // Disables styled imports
+    'import/no-named-as-default': 'off',
+  },
+  env: {
+    browser: true,
+    es6: true,
   },
   settings: {
     'import/resolver': {
@@ -44,13 +45,5 @@ module.exports = {
         extensions: ['.js', '.jsx', '.ts', '.tsx'],
       },
     },
-    'import/extensions': ['.js', '.jsx', '.ts', '.tsx'],
-    'import/parsers': {
-      '@typescript-eslint/parser': ['.ts', '.tsx'],
-    },
-  },
-  env: {
-    browser: true,
-    es6: true,
   },
 };
