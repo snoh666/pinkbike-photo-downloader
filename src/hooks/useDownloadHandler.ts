@@ -4,6 +4,7 @@ import downloadPhoto from '../utils/downloadPhoto';
 import getPhotoIdFromLink from '../utils/getPhotoIdFromLink';
 
 import useCurrentTabLink from './useCurrentTabLink';
+import useAnalytics from './useAnalytics';
 
 interface UseDownloadHandler {
   photoId?: string;
@@ -14,6 +15,7 @@ interface UseDownloadHandler {
 const useDownloadHandler = (): UseDownloadHandler => {
   const [photo, setPhoto] = useState('');
   const [error, setError] = useState<string | undefined>();
+  const { sendEvent } = useAnalytics();
 
   const link = useCurrentTabLink();
 
@@ -32,7 +34,11 @@ const useDownloadHandler = (): UseDownloadHandler => {
       return;
     }
 
-    downloadPhoto(photo);
+    sendEvent?.('downloadImage', {
+      id: photo,
+    }).then(() => {
+      downloadPhoto(photo);
+    });
   };
 
   return {
