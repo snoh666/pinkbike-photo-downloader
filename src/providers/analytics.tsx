@@ -72,36 +72,36 @@ const fetchEvents = async (events: GAEvents[]) => {
   }
 };
 
+const sendEvent = <TEventName extends EventName>(
+  eventName: TEventName,
+  options: EventNameToOptions<typeof eventName>
+) => {
+  if (eventName === 'downloadImage') {
+    return fetchEvents([
+      {
+        name: 'page_view',
+        params: {
+          page_title: `Download Image - ${(options as EventNameToOptions<'downloadImage'>).id}`,
+        },
+      },
+    ]);
+  }
+
+  if (eventName === 'pageView') {
+    return fetchEvents([
+      {
+        name: 'page_view',
+        params: {
+          page_title: (options as EventNameToOptions<'pageView'>).title,
+        },
+      },
+    ]);
+  }
+
+  return Promise.resolve();
+};
+
 export const AnalyticsProvider = ({ children }: { children: ReactNode }) => {
-  const sendEvent = <TEventName extends EventName>(
-    eventName: TEventName,
-    options: EventNameToOptions<typeof eventName>
-  ) => {
-    if (eventName === 'downloadImage') {
-      return fetchEvents([
-        {
-          name: 'image_downloaded',
-          params: {
-            id: (options as EventNameToOptions<'downloadImage'>).id,
-          },
-        },
-      ]);
-    }
-
-    if (eventName === 'pageView') {
-      return fetchEvents([
-        {
-          name: 'page_view',
-          params: {
-            page_title: (options as EventNameToOptions<'pageView'>).title,
-          },
-        },
-      ]);
-    }
-
-    return Promise.resolve();
-  };
-
   return (
     <AnalyticsContext.Provider value={{ sendEvent }}>
       {children}
