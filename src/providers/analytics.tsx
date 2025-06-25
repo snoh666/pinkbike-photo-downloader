@@ -36,19 +36,12 @@ const getOrCreateClientId = async () => {
   return clientId;
 };
 
-type GAEvents =
-  | {
-      name: 'image_downloaded';
-      params: {
-        id: string;
-      };
-    }
-  | {
-      name: 'page_view';
-      params: {
-        page_title: string;
-      };
-    };
+type GAEvents = {
+  name: 'page_view';
+  params: {
+    page_title: string;
+  };
+};
 
 const fetchEvents = async (events: GAEvents[]) => {
   const GA_ENDPOINT = 'https://www.google-analytics.com/mp/collect';
