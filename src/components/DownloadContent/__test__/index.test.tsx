@@ -56,4 +56,30 @@ describe('Components / Download Content', () => {
       });
     });
   });
+
+  it('should show error message when no photo id is found', async () => {
+    jest
+      .spyOn(chrome.tabs, 'query')
+      .mockResolvedValue([
+        { url: 'https://www.pinkbike.com/' } as chrome.tabs.Tab,
+      ]);
+
+    const createFn = jest.fn();
+    jest.spyOn(chrome.tabs, 'create').mockImplementation(createFn);
+
+    render(<DownloadContent />);
+
+    expect(await screen.findByText('none')).toBeVisible();
+
+    const downloadButton = screen.getByTestId('download-image');
+    expect(downloadButton).toBeVisible();
+
+    userEvent.click(downloadButton);
+
+    expect(
+      await screen.findByText('No pinkbike photo detected to download')
+    ).toBeVisible();
+
+    expect(createFn).toHaveBeenCalledTimes(0);
+  });
 });
