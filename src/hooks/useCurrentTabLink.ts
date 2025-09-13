@@ -6,15 +6,15 @@ const useCurrentTabLink = (): Link => {
   const [link, setLink] = useState<Link>('');
 
   useEffect(() => {
-    chrome.tabs.query(
-      {
+    const updateLink = async () => {
+      const tabs = await chrome.tabs.query({
         currentWindow: true,
         active: true,
-      },
-      tab => {
-        setLink(tab[0].url);
-      }
-    );
+      });
+      setLink(tabs[0].url);
+    };
+
+    updateLink();
   }, []);
 
   return link;
