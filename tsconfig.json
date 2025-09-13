@@ -1,15 +1,8 @@
 {
   "compilerOptions": {
-    "types": [
-      "jest",
-      "chrome"
-    ],
+    "types": ["jest", "chrome"],
     "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -28,15 +21,6 @@
       "@testing": ["src/testing/index.tsx"]
     }
   },
-  "include": [
-    "src/**/*",
-    "setupTests.ts",
-    ".eslintrc.js",
-    "vite.config.ts",
-  ],
-  "exclude": [
-    "build",
-    "node_modules",
-    "vite.config.ts"
-  ],
+  "include": ["src/**/*", "setupTests.ts", ".eslintrc.js", "vite.config.ts"],
+  "exclude": ["build", "node_modules", "vite.config.ts"]
 }

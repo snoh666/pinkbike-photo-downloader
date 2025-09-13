@@ -6,7 +6,7 @@ export default defineConfig({
   resolve: {
     alias: {
       '@testing': '/src/testing/index.tsx',
-    }
+    },
   },
   build: {
     outDir: 'build',

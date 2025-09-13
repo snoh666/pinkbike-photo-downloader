@@ -1,9 +1,11 @@
 # Pinkbike Photo Downloader
 
 ## Overview
-Chromium extension to allow downloading highest quality (original size) images from pinkbike.com 
 
-## What problem does this extension solve? 
+Chromium extension to allow downloading highest quality (original size) images from pinkbike.com
+
+## What problem does this extension solve?
+
 If you’re not the owner of the image, you can only download resized versions of the image, sometimes those sizings are not really good to ur use case.
 
 As an example this photo can only be downloaded as 1600x1067 and by using this extension we can download it original size which is 5511x3674
@@ -23,10 +25,11 @@ Of course you can do that by hand ([Check next section](#how-to-download-manuall
 5. Replace two times "{photoId}" with your photo id
 6. Press enter
 7. You have done it! It should start downloading photo in original size!
+
 ```
 http://ep1.pinkbike.org/p0pb{photoId}/p4pb{photoId}.jpg
 ```
 
-
 ## License
+
 (…)
