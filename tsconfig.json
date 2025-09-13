@@ -13,14 +13,13 @@
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
-    "module": "esnext",
-    "moduleResolution": "node",
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
     "resolveJsonModule": true,
     "noEmit": true,
     "jsx": "react-jsx",
     "typeRoots": [
       "./types",
-      "node_modules/@types"
     ],
     "isolatedModules": true
   },
@@ -28,11 +27,13 @@
     "src",
     "setupTests.ts",
     ".eslintrc.js",
-    "node_modules/@types/jest/index.d.ts"
+    "vite.config.ts",
   ],
   "exclude": [
-    "config-overrides.js",
     "jest.config.js",
+    "build",
+    "node_modules",
+    "vite.config.ts"
   ],
   "typeRoots": [
     "./types"
