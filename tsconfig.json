@@ -13,8 +13,8 @@
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
-    "module": "nodenext",
-    "moduleResolution": "nodenext",
+    "module": "esnext",
+    "moduleResolution": "node",
     "resolveJsonModule": true,
     "noEmit": true,
     "jsx": "react-jsx",
@@ -24,7 +24,7 @@
     "isolatedModules": true
   },
   "include": [
-    "src",
+    "src/**/*",
     "setupTests.ts",
     ".eslintrc.js",
     "vite.config.ts",
