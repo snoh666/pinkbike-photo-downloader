@@ -1,5 +1,6 @@
 {
   "name": "react-typescript-boilerplate",
+  "type": "module",
   "version": "1.1.1",
   "private": true,
   "dependencies": {

@@ -46,4 +46,20 @@ module.exports = {
       },
     },
   },
+  overrides: [
+    {
+      files: ['vite.config.ts'],
+      parserOptions: {
+        project: './tsconfig.node.json',
+        tsconfigRootDir: __dirname,
+      },
+      env: {
+        node: true,
+        browser: false,
+      },
+      rules: {
+        'import/no-extraneous-dependencies': 'off',
+      },
+    },
+  ],
 };
