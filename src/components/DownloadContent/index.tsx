@@ -19,11 +19,7 @@ const DownloadContent = () => {
         Current photo id:&nbsp;
         <SpanPhotoId>{photoId || 'none'}</SpanPhotoId>
       </InfoText>
-      <Button
-        onClick={handleDownload}
-        type='button'
-        data-testid='download-image'
-      >
+      <Button onClick={handleDownload} type='button' data-testid="download-image">
         <span>Download Image</span>
       </Button>
       <ErrorMessage>{error || <span>{error}</span>}</ErrorMessage>
