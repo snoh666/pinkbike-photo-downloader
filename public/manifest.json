@@ -2,7 +2,7 @@
   "name": "PinkBike Photo Downloader",
   "description": "Download pinkbike photos in highest resolution available (original size)",
   "manifest_version": 3,
-  "version": "1.2.1",
+  "version": "1.1.2",
 
   "action": {
     "default_icon": {
