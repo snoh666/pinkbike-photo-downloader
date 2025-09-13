@@ -21,7 +21,7 @@ interface AnalyticsOptions {
   sendEvent?: SendEventFunction;
 }
 
-const AnalyticsContext = createContext<AnalyticsOptions>({
+export const AnalyticsContext = createContext<AnalyticsOptions>({
   sendEvent: undefined,
 });
 

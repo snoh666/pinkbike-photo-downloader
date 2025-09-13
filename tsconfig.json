@@ -1,5 +1,9 @@
 {
   "compilerOptions": {
+    "types": [
+      "jest",
+      "chrome"
+    ],
     "target": "es5",
     "lib": [
       "dom",
@@ -18,10 +22,11 @@
     "resolveJsonModule": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "typeRoots": [
-      "./types",
-    ],
-    "isolatedModules": true
+    "isolatedModules": true,
+    "baseUrl": ".",
+    "paths": {
+      "@testing": ["src/testing/index.tsx"]
+    }
   },
   "include": [
     "src/**/*",
@@ -30,12 +35,8 @@
     "vite.config.ts",
   ],
   "exclude": [
-    "jest.config.js",
     "build",
     "node_modules",
     "vite.config.ts"
   ],
-  "typeRoots": [
-    "./types"
-  ]
 }
